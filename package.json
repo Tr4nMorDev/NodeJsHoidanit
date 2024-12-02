@@ -1,0 +1,27 @@
+{
+  "name": "full-backend",
+  "version": "1.0.0",
+  "description": "Hoi dan it backend",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tr4nMorDev/NodeJsHoidanit.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "PhongIt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tr4nMorDev/NodeJsHoidanit/issues"
+  },
+  "homepage": "https://github.com/Tr4nMorDev/NodeJsHoidanit#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
