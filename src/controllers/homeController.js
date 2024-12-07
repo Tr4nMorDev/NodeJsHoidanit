@@ -1,26 +1,23 @@
 const database = require("../config/Database");
+const { getdata } = require("../services/CRUDCustomers.js");
 
 const getLogin = (req, res) => {
   return res.render("login.ejs");
 };
-const getCreate = (req, res) => {
+
+const getCreate = async (req, res) => {
   let { name, email, phone, address } = req.body;
-  database.query(
+  const [results, fields] = await database.query(
     "INSERT INTO customers (name, email, phone, address) VALUES (?, ?, ?, ?)",
-    [name, email, phone, address],
-    (err, results) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send("Create successfully");
-        console.log("Đã lưu vào database ", req.body);
-      }
-    }
+    [name, email, phone, address]
   );
+  console.log(results);
+  res.send("Create success");
 };
 
-const getdata = (req, res) => {
-  res.render("home.ejs");
+const getHome = async (req, res) => {
+  let results = await getdata();
+  return res.render("home.ejs", { listUsers: results });
 };
 
 const getSamples = (req, res) => {
@@ -34,5 +31,5 @@ module.exports = {
   getAbout,
   getLogin,
   getCreate,
-  getdata,
+  getHome,
 };
