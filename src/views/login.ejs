@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Thanh điều hướng -->
+    <div class="nav3">
+      <a href="/home">Trang Chủ</a>
+      <a href="/login">Đăng nhập</a>
+      <a href="/about">Giới Thiệu</a>
+      <a href="/sample">Liên Hệ</a>
+    </div>
+    <!-- Ô nhập liệu -->
+    <div class="input-container">
+      <h2>Nhập thông tin của bạn</h2>
+      <form action="/create" method="post">
+        <input type="text" placeholder="Nhập ten" name="name" />
+        <input type="email" placeholder="Nhập Email" name="email" />
+        <input type="text" placeholder="Nhập Số điện thoại" name="phone" />
+        <input type="text" placeholder="Nhập địa chỉ" name="address" />
+        <button class="Cai-nut" type="submit">Save</button>
+      </form>
+    </div>
+  </body>
+</html>

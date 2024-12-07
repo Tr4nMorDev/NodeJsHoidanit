@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Phong cách cho thanh nav */
+.nav3 {
+  display: flex;
+  background-color: #007bff;
+  padding: 10px;
+  color: white;
+}
+
+.nav3 a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav3 a:hover {
+  text-decoration: underline;
+}
+
+/* Phần container chứa input */
+.input-container {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 300px;
+}
+
+.input-container input {
+  padding: 10px;
+  display: flex;
+  width: 50%;
+  margin-left: 200px;
+  height: 30px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+/* ====================================== */
+
+.Home-data {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Home-data h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.table-data {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-data th,
+.table-data td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table-data thead th {
+  background-color: #4caf50;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.table-data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-data tr:hover {
+  background-color: #eafaf1;
+}
+
+.table-data td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-data tr:last-child td {
+  border-bottom: none;
+}

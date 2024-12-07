@@ -9,6 +9,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 const hostname = process.env.HOSTNAME;
 
+app.use(express.json()); // Used to parse JSON bodies
+app.use(express.urlencoded({ extended: true }));
+
 //Config view engine
 ConfigViewEngine(app);
 app.use("/", webRoutes);
