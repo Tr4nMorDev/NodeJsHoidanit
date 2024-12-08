@@ -5,6 +5,18 @@ const getLogin = (req, res) => {
   return res.render("login.ejs");
 };
 
+const update = async (req, res) => {
+  return res.render("update.ejs");
+};
+const getUpdateData = async (req, res) => {
+  let id = req.params.id;
+  const [results, fields] = await database.query(
+    "SELECT * FROM customers WHERE id = ?",
+    [id]
+  );
+  console.log(results);
+  return res.render("update.ejs", { data: results[0] });
+};
 const getCreate = async (req, res) => {
   let { name, email, phone, address } = req.body;
   const [results, fields] = await database.query(
@@ -32,4 +44,6 @@ module.exports = {
   getLogin,
   getCreate,
   getHome,
+  update,
+  getUpdateData,
 };

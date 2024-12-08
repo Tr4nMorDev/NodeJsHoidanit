@@ -14,7 +14,6 @@
       <a href="/sample">Liên Hệ</a>
     </div>
     <div class="Home-data">
-      <%= listUsers %>
       <h1>Home Data</h1>
       <table class="table-data">
         <tr>
@@ -24,31 +23,15 @@
           <th>Địa chỉ</th>
           <th>Hoạt động</th>
         </tr>
+        <% listUsers.forEach(function(user) { %>
         <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>Germany</td>
-          <td><button>delete</button><button>edit</button></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.phone %></td>
+          <td><%= user.address %></td>
+          <td><a href="/deletedata">delete</a><a href="/update">edit</a></td>
         </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td>Germany</td>
-        </tr>
+        <% }); %>
       </table>
     </div>
   </body>
