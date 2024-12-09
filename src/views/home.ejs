@@ -17,6 +17,7 @@
       <h1>Home Data</h1>
       <table class="table-data">
         <tr>
+          <th>id</th>
           <th>Tên</th>
           <th>email</th>
           <th>phone</th>
@@ -25,11 +26,15 @@
         </tr>
         <% listUsers.forEach(function(user) { %>
         <tr>
+          <td><%= user.customer_id %></td>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= user.phone %></td>
           <td><%= user.address %></td>
-          <td><a href="/deletedata">delete</a><a href="/update">edit</a></td>
+          <td>
+            <button>delete</button
+            ><a href="/update/<%= user.customer_id %>">edit</a>
+          </td>
         </tr>
         <% }); %>
       </table>

@@ -17,11 +17,31 @@
     <!-- Ô nhập liệu -->
     <div class="input-container">
       <h2>Chỉnh sửa thông tin</h2>
-      <form action="/updatedata" method="post">
-        <input type="text" placeholder="Nhập ten" name="name" />
-        <input type="email" placeholder="Nhập Email" name="email" />
-        <input type="text" placeholder="Nhập Số điện thoại" name="phone" />
-        <input type="text" placeholder="Nhập địa chỉ" name="address" />
+      <form action="/updateUser/<%= usersEdit.customer_id %>" method="POST">
+        <input
+          type="text"
+          placeholder="Nhập ten"
+          name="name"
+          value="<%= usersEdit.name %>"
+        />
+        <input
+          type="email"
+          placeholder="Nhập Email"
+          name="email"
+          value="<%= usersEdit.email %>"
+        />
+        <input
+          type="text"
+          placeholder="Nhập Số điện thoại"
+          name="phone"
+          value="<%= usersEdit.phone %>"
+        />
+        <input
+          type="text"
+          placeholder="Nhập địa chỉ"
+          name="address"
+          value="<%= usersEdit.address %>"
+        />
         <button class="Cai-nut" type="submit">Save</button>
       </form>
     </div>
